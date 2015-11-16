@@ -4,5 +4,5 @@ This is the finance tracker app from the Complete Ruby on Rails Developer course
 
 Ruby version is: ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-linux]
 
-As the app has not been developed yest there is no further information
+As the app has not been fully developed yet there is no further information
 at this time.
