@@ -10,7 +10,7 @@ class UserStocksController < ApplicationController
   # GET /user_stocks/1
   # GET /user_stocks/1.json
   def show
-    
+
   end
 
   # GET /user_stocks/new
@@ -20,7 +20,7 @@ class UserStocksController < ApplicationController
 
   # GET /user_stocks/1/edit
   def edit
-    
+
   end
 
   # POST /user_stocks
@@ -72,10 +72,13 @@ class UserStocksController < ApplicationController
   # DELETE /user_stocks/1
   # DELETE /user_stocks/1.json
   def destroy
-    @user_stock.destroy
-    respond_to do |format|
-      format.html { redirect_to my_portfolio_path, notice: 'Stock successfully removed from portfolio.' }
-      format.json { head :no_content }
+    if @user_stock.destroy
+      respond_to do |format|
+        format.html { redirect_to my_portfolio_path, notice: 'Stock successfully removed from portfolio.' }
+        format.json { head :no_content }
+      end
+    else
+      render 'my_portfolio'
     end
   end
 
